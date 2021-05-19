@@ -1,5 +1,4 @@
 import React,{ useState,useEffect } from 'react';
-import "./Map.css"
 import { MapContainer,TileLayer,Marker,Popup,LayerGroup,Circle } from "react-leaflet"
 import { showDataOnMap } from './util'
 

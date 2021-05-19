@@ -1,0 +1,10 @@
+.dashboard{
+    background-color: red;
+}
+.MuiPaper-root{
+      background-color: red;  
+}
+.dashboard_text{
+  margin-left: -30px;
+  color: #fff;
+}
