@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
       width: drawerWidth,
-      backgroundColor:color.dashboard
+      backgroundColor:'var(--primary-color)'
   },
   // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
@@ -44,16 +44,19 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
 }));
-export default function Drawer1() {
-      const classes = useStyles();
-const toggleDrawer = () => {
-    
-}
+export default function Drawer1(props) {
+  const classes = useStyles();
+  
 
+const map =item=>{
+		let route = props.history.location.pathname;
+        item.active = route.includes(item.link);
+		return item;
+	}
 return (
     <div>
         <React.Fragment key={`left`}>
-          <Drawer
+        <Drawer
         className={classes.drawer}
         variant="permanent"
         classes={{
@@ -62,8 +65,7 @@ return (
              anchor="left"
       >
         <div className={classes.toolbar} />
-
-                <DashboardItem items={draweData}/>
+        <DashboardItem items={draweData.map(map)} {...props}/>
       </Drawer>
         </React.Fragment>
     </div>

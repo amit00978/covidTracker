@@ -8,10 +8,9 @@ import Table from '../../Table'
 import LineGraph from '../../LineGraph'
 import { sortData,prettyPrintStart } from '../../util'
 import "leaflet/dist/leaflet.css"
-import Drawer from '../../common/Drawer/Drawer'
 
 
-function Dashboard() {
+function Dashboard(props) {
   const [countries, setCountries] = useState([])
   const [country, setCountry] = useState("worldwide")
   const [countryInfo, setCountryInfo] = useState({})
@@ -53,6 +52,7 @@ function Dashboard() {
   const getCountryInfo = async(countryCode) => {
     const url = countryCode === 'worldwide' ? "https://disease.sh/v3/covid-19/all" : `https://disease.sh/v3/covid-19/countries/${countryCode}`
     const data = await get(url)
+    debugger
     if (data && data.countryInfo)
     {
         setMapCenter([data.countryInfo.lat, data.countryInfo.long])
@@ -98,7 +98,7 @@ function Dashboard() {
   return (
     <div className="app">
       <div className="drawer_nav_left"> 
-        <Drawer />
+
       </div>
       {/*------- Left Panel---------- */}
     <div className="drawer_nav_right">

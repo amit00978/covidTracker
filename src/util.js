@@ -15,7 +15,6 @@ export const sortData = (data) => {
 
 // Draw circles on the map with interactive tooltop
 export const showDataOnMap = (data, casesType = "deaths",casesTypeColor) => {
-  console.log("caseTyoe", casesTypeColor)
   //  const [casesType, setCasesType] = useState(casesTypeColors)
 
     return (
