@@ -1,6 +1,6 @@
 import React,{ useState,useEffect } from 'react';
 import { MapContainer,TileLayer,Marker,Popup,LayerGroup,Circle } from "react-leaflet"
-import { showDataOnMap } from './util'
+import { showDataOnMap } from '../../../util'
 
 const casesTypeColors = {
   cases: {
@@ -33,7 +33,7 @@ function Map({ countries, center, zoom, casesType }) {
             <MapContainer center={center} zoom={zoom}         whenCreated={setMap}>
                 <TileLayer
                   attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
 
                 {showDataOnMap(countries,casesType,casesTypeColors[casesType])}

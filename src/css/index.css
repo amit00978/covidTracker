@@ -15,4 +15,9 @@ code {
 :root {
     --primary-color: #19224d;
     --white-color: #fff;
+    --darkText-color: #a6b4c6;  
+}
+.searchBar{
+   border-radius: 20px !important;
+   margin-top: 5px;
 }
