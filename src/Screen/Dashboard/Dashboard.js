@@ -14,6 +14,7 @@ import LineGraph from "../../LineGraph";
 import { sortData, prettyPrintStart } from "../../util";
 import "leaflet/dist/leaflet.css";
 import { SearchBar } from "../../common/index";
+import Slideshow from   "../../common/component/slideshow/slideshow"
 
 function Dashboard(props) {
   const [countries, setCountries] = useState([]);
@@ -163,10 +164,12 @@ function Dashboard(props) {
               className="searchBar"
             />
             {/* Table */}
+       
             <Table countries={tableData} />
             {/* Garpgh */}
-            <h3 className="world__title"> World Wide new {caseType}</h3>
-            <LineGraph caseType={caseType} />
+                 <Slideshow />
+            {/* <h3 className="world__title"> World Wide new {caseType}</h3>
+            <LineGraph caseType={caseType} /> */}
           </CardContent>
         </Card>
       </div>

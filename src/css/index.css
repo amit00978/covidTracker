@@ -16,8 +16,12 @@ code {
     --primary-color: #19224d;
     --white-color: #fff;
     --darkText-color: #a6b4c6;  
+    --secondary-color:#f6f6fb;
+    --third-color:#f65d4e;
 }
 .searchBar{
    border-radius: 20px !important;
    margin-top: 5px;
+   background-color:  var(--secondary-color) !important;
+ box-shadow: 0px 0px var(--secondary-color)  !important
 }
